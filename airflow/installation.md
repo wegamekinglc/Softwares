@@ -33,6 +33,8 @@ libmysqlclient-dev
 sudo apt-get install mysql-server
 ```
 
+以及：
+
 ```
 pip install -U airflow
 ```
