@@ -11,13 +11,14 @@ create database airflow;
 create user airflow_admin@'%' identified by 'yourpassword';
 grant all privileges on airflow.* to airflow_admin@'%';
 ```
+
 ### ``celery``数据库
 
 ``celery``可以配置``mysql``作为存储运行结果的数据库。这里我们可以新开一个``database``，或者选择与``airflow``合用。
 
 ## 配置``rabbitmq``
 
-``celery``使用``rabbitmq``作为``broker``。我们为了方便``airflow``对它的使用，我们对``rabbitmq``进行单独的配置：
+``celery``使用``rabbitmq``作为``broker``，默认可以直接使用guest用户。这里我们为了方便``airflow``对它的使用，我们对``rabbitmq``进行单独的配置：
 
 ```
 $ sudo rabbitmqctl add_user airflow yourpassword
