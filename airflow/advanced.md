@@ -26,6 +26,8 @@ donot_pickle = True
 
 ## 不显示样例dags
 
+在``airflow.cfg``文件中将``load_example``的值改为`False`
+
 ```
 load_examples = False
 ```
