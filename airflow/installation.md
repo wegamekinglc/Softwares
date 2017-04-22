@@ -27,6 +27,8 @@ libmysqlclient-dev
 
 ## 安装
 
+绝大多数的模块都可以通过``Linux``下的标准安装模式``apt``以及``python``安装工具``pip``完成安装。
+
 ```
 pip install -U airflow
 ```
