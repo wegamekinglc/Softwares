@@ -4,7 +4,7 @@
 
 ``airflow``可以很方便的使用``celery``进行平行扩展，步骤如下：
 
-* 按照[安装](installation.md)和[配置](Configuration.md)章节设置好主节点；
+* 按照[安装](installation.md)和[配置](configuration.md)章节设置好主节点；
 
 * 讲``$AIRFLOW_HOME``目录完整拷贝至``celery``其它工作节点上;
 
