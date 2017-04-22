@@ -33,7 +33,7 @@ $ sudo rabbitmqctl set_permissions -p airflow_host airflow ".*" ".*" ".*"
 
 ### 配置工作目录
 
-``airflow``需要配置自己的工作目录，方法例如：在用户目录下新建``airflow``文件夹，然后
+``airflow``需要配置自己的工作目录，方法例如：在当前用户目录下新建``airflow``文件夹，然后
 
 ```bash
 $ export AIRFLOW_HOME=~/airflow
