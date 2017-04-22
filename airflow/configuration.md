@@ -6,7 +6,7 @@
 
  ``airflow``需要有一个专用的数据存放任务的信息以及产生的日志。这里使用``mysql``，我们创建如下的数据库：
 
-```sql
+```
 create database airflow;
 create user airflow_admin@'%' identified by 'yourpassword';
 grant all privileges on airflow.* to airflow_admin@'%';
