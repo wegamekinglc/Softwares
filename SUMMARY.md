@@ -7,6 +7,6 @@
   * [Windows](airflow/windows.md)
   * [Advanced](airflow/advanced.md)
 * [Ipopt](ipopt.md)
-  * Linux
-  * Windows
+  * [Linux](ipopt/linux.md)
+  * [Windows](ipopt/windows.md)
 
