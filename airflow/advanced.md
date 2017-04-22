@@ -25,3 +25,7 @@ donot_pickle = True
 ```
 
 ## 不显示样例dags
+
+```
+load_examples = False
+```
