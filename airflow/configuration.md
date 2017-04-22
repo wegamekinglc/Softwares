@@ -82,6 +82,8 @@ broker_url = amqp://airflow:yourpassword@localhost:5672/airflow_host
 celery_result_backend = db+mysql://airflow_admin:yourpassword@localhost:3306/airflow
 ```
 
+这里的具体参数设置见前段。
+
 ## 启动``airflow``
 
 ### 初始化
