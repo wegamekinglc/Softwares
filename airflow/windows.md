@@ -34,31 +34,31 @@ $ ssh username@hostaddress
 
 * 首先在``Linux``电脑上产生私钥与公钥：
 
-```
-$ ssh-keygen -t rsa
-```
+    ```
+    $ ssh-keygen -t rsa
+    ```
 
-默认产生地址在：```~/.ssh```目录下。会有两个文件：``id_rsa``以及``id_rsa.pub``，分别是私钥以及公钥。
+    默认产生地址在：```~/.ssh```目录下。会有两个文件：``id_rsa``以及``id_rsa.pub``，分别是私钥以及公钥。
 
 * 配置``windows``端
 
-在当前用户目录下新建``.ssh``目录，如下：
-
-```
-C:\Users\username\.ssh
-```
-
-新建``authorized_keys``文件，并将``id_rsa.pub``文件中的内容追加至``authorized_keys``文件中。
-
+    在当前用户目录下新建``.ssh``目录，如下：
+    
+    ```
+    C:\Users\username\.ssh
+    ```
+    
+    新建``authorized_keys``文件，并将``id_rsa.pub``文件中的内容追加至``authorized_keys``文件中。
+    
 * 尝试登录
 
-再次从``Linux``机器上尝试连接``Windows``：
-
-```
-$ ssh username@hostaddress
-```
-
-这个时候应该就不会再需要密码输入了。
+    再次从``Linux``机器上尝试连接``Windows``：
+    
+    ```
+    $ ssh username@hostaddress
+    ```
+    
+    这个时候应该就不会再需要密码输入了。
 
 ## 一些注意事项
 
