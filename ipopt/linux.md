@@ -4,13 +4,13 @@
 
 ## 获取代码
 
-当前最新的代码可以从下面的svn地址获取[^1]：
+当前最新的代码可以从下面的svn地址获取：
 
 ```
 $ svn co https://projects.coin-or.org/svn/Ipopt/stable/3.12 CoinIpopt 
 ```
 
-[^1]: 不要从`github`上获取代码，`github`上获取的代码不会带有第三方的依赖。
+> 不要从`github`上获取代码，`github`上获取的代码不会带有第三方的依赖。
     
     
 
