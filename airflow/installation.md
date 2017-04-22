@@ -39,4 +39,4 @@ sudo apt-get install mysql-server
 pip install -U airflow
 ```
 
-安装完成之后，可以进入``airflow``安装目录下的``example_dags``，删除所有文件。这样在配置好``airflow``之后不会有多余的测试用的任务。也可以通过配置``airflow.cfg``配置文件的方式，不显示这些例子，具体请参考：[
+安装完成之后，可以进入``airflow``安装目录下的``example_dags``，删除所有文件。这样在配置好``airflow``之后不会有多余的测试用的任务。也可以通过配置``airflow.cfg``配置文件的方式，不显示这些例子，具体请参考：[Advanced](Advanced.md)
