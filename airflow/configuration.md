@@ -39,7 +39,11 @@ $ sudo rabbitmqctl set_permissions -p airflow_host airflow ".*" ".*" ".*"
 $ export AIRFLOW_HOME=~/airflow
 ```
 
-上面这行可以放到用户的``~/.bashrc``文件中，确保下次打开命令行时都会配置这个环境变量。
+上面这行可以放到用户的``~/.bashrc``文件中，确保下次打开命令行时都会配置这个环境变量。别忘了在加入``.bashrce``文件之后，运行下面的命令使其立即生效：
+
+```
+$ source ~/.bashrc
+```
 
 ### 初始化工作目录
 
