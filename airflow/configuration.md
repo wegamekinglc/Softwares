@@ -18,7 +18,7 @@ grant all privileges on airflow.* to airflow_admin@'%';
 
 ## 配置``rabbitmq``
 
-``celery``使用``rabbitmq``作为``broker``，默认可以直接使用guest用户和``/``。这里我们为了方便``airflow``对它的使用，我们对``rabbitmq``进行单独的配置：
+``celery``使用``rabbitmq``作为``broker``，默认可以直接使用guest用户和``/``host。这里我们为了方便``airflow``对它的使用，我们对``rabbitmq``进行单独的配置：
 
 ```
 $ sudo rabbitmqctl add_user airflow yourpassword
