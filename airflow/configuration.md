@@ -73,7 +73,7 @@ executor = CeleryExecutor
 sql_alchemy_conn = mysql+pymysql://airflow_admin:yourpassword@localhost:3306/airflow
 ```
 
-这里具体的参数请与你设置的``airflow``数据一致。
+这里具体的参数请与你设置的``airflow``数据库一致。这里我们选用了``pymysql``作为``mysql``数据库的``python``驱动。用户也可以使用例如：``mysqldb``，配置方式不再赘述。
 
 * 设置``celery``参数
 
