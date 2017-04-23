@@ -1,6 +1,8 @@
 # Summary
 
 * [Introduction](README.md)
+* [CUDA](cuda.md)
+  * Installation
 * [Airflow](airflow.md)
   * [Installation](airflow/installation.md)
   * [Configuration](airflow/configuration.md)
