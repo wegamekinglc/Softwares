@@ -2,7 +2,7 @@
 
 * [Introduction](README.md)
 * [CUDA](cuda.md)
-  * Installation
+  * [Installation](cuda/installation.md)
 * [Airflow](airflow.md)
   * [Installation](airflow/installation.md)
   * [Configuration](airflow/configuration.md)
