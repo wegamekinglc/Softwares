@@ -41,3 +41,15 @@ $ make install
 ```
 
 默认情况下，生产的库文件在根目录下的`lib`文件夹下。
+
+
+## 使用`openblas`作为链接
+
+* 下载并安装`openblas`
+
+`openblas`可以在[`openblas`](https://github.com/xianyi/OpenBLAS)找到，运行下面的指令即可完成安装：
+
+```
+$ make
+$ make install
+```
