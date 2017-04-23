@@ -34,5 +34,10 @@ export PATH="/usr/local/cuda-8.0/bin:$PATH"
 export LD_LIBRARY_PAT="/usr/local/cuda-8.0/lib64:$LD_LIBRARY_PATH"
 ```
 
-安装`cudnn`的
+安装`cudnn`的运行与开发环境：
+
+```
+$ sudo dpkg -i libcudnn6_6.0.20-1+cuda8.0_amd64.deb
+$ sudo dpkg -i libcudnn6-dev_6.0.20-1+cuda8.0_amd64.deb
+```
 
