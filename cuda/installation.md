@@ -26,3 +26,10 @@ $ sudo apt-get update
 $ sudo apt-get install cuda
 ```
 
+在安装完成后，添加下面的行进入`～/.bashrc`文件：
+
+```
+
+```
+
+安装`cudnn`的
