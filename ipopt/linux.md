@@ -29,3 +29,15 @@ $ svn co https://projects.coin-or.org/svn/Ipopt/stable/3.12 CoinIpopt
     5. Mumps
     
 `HSL`比较特殊，需要手动下载，[HSL下载页](www.hsl.rl.ac.uk/ipopt/)。下载完成后，将下载包解压，放入`ThirdParty/HSL`目录下。
+
+* 配置安装
+
+在根目录下，运行下面的命令行指令，即可完成编译安装：
+
+```
+$ ./configure
+$ make
+$ make install
+```
+
+默认情况下，生产的库文件在根目录下的`lib`文件夹下。
