@@ -13,6 +13,7 @@ cuda-repo-ubuntu1604_8.0.61-1_amd64.deb
 以及`cudnn`安装包：
 
 ```
+libcudnn6_6.0.20-1+cuda8.0_amd64.deb
 libcudnn6-dev_6.0.20-1+cuda8.0_amd64.deb
 ```
 
@@ -29,7 +30,9 @@ $ sudo apt-get install cuda
 在安装完成后，添加下面的行进入`～/.bashrc`文件：
 
 ```
-
+export PATH="/usr/local/cuda-8.0/bin:$PATH"
+export LD_LIBRARY_PAT="/usr/local/cuda-8.0/lib64:$LD_LIBRARY_PATH"
 ```
 
 安装`cudnn`的
+
