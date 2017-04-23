@@ -28,4 +28,4 @@ $ svn co https://projects.coin-or.org/svn/Ipopt/stable/3.12 CoinIpopt
     4. Metis
     5. Mumps
     
-`HSL`比较特殊，需要手动下载，[HSL下载页](www.hsl.rl.ac.uk/ipopt/)
+`HSL`比较特殊，需要手动下载，[HSL下载页](www.hsl.rl.ac.uk/ipopt/)。下载完成后，将下载包解压，放入`ThirdParty/HSL`目录下。
