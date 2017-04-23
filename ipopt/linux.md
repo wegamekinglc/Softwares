@@ -51,5 +51,27 @@ $ make install
 
 ```
 $ make
+$ make install PREFIX=/your/path/to/installation
+```
+
+`/your/path/to/installation`是你想要安装的目录。最后不要忘了将`openblas`的安装目录加入`LD_LIBRARY_PATH`中。
+
+* 配置`ipopt`的安装
+
+使用如下的命令即可完成：
+
+```
+$ ./configure --with-blas="-lopenblas" --with-lapack="-lopenblas"
+$ make
+$ make install
+```
+
+## 使用`mkl`作为链接
+
+在安装完成`Intel(R) Parallel Studio`之后，根据 [Intel Link Advisor](https://software.intel.com/en-us/articles/intel-mkl-link-line-advisor/) 的提示，使用如下的命令即可完成安装：
+
+```
+$ ./configure --with-blas="-L${MKLROOT}/lib/intel64 -Wl,--no-as-needed -lmkl_intel_lp64 -lmkl_intel_thread -lmkl_core -liomp5 -lpthread -lm -ldl" --with-lapack="-L${MKLROOT}/lib/intel64 -Wl,--no-as-needed -lmkl_intel_lp64 -lmkl_intel_thread -lmkl_core -liomp5 -lpthread -lm -ldl" CFLAGS="-m64 -I${MKLROOT}/include" CXXFLAGS="-m64 -I${MKLROOT}/include"
+$ make
 $ make install
 ```
