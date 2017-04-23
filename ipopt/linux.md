@@ -15,3 +15,17 @@ $ svn co https://projects.coin-or.org/svn/Ipopt/stable/3.12 CoinIpopt
     
 
 ## 基础安装
+
+该部分，主要参考自 [Ipopt安装指南](https://www.coin-or.org/Ipopt/documentation/node10.html)：
+
+* 下载第三方组件
+    
+进入根目录下ThirdParty目录，分别下载如下部件：
+
+    1. ASL
+    2. Blas
+    3. Lapack
+    4. Metis
+    5. Mumps
+    
+`HSL`比较特殊，需要手动下载，[HSL下载页](www.hsl.rl.ac.uk/ipopt/)
