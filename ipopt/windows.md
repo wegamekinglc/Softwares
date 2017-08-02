@@ -1,0 +1,30 @@
+# Installation on Windows
+
+## Using MSYS2
+
+## Set up envirement
+
+更改msys2_shell.cmd文件，增加以下两行：
+
+```
+call "D:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\amd64\vcvars64.bat"
+call "D:\Program Files (x86)\IntelSWTools\compilers_and_libraries_2017.2.187\windows\bin\ifortvars.bat" -arch intel64 vs2015
+```
+
+建议在Windows 10环境下的powershell中运行msys2_shell.cmd，以防止环境变量字符长度过长的问题。
+
+## update old scripts
+
+* config.guess
+
+```
+curl -o config.guess 'http://git.savannah.gnu.org/gitweb/?p=config.git;a=blob_plain;f=config.guess;hb=HEAD'
+```
+
+* config.sub
+
+```
+ curl -o config.sub 'http://git.savannah.gnu.org/gitweb/?p=config.git;a=blob_plain;f=config.sub;hb=HEAD'
+```
+
+需要同时更新Ipopt以及ThirdParty目录下所有的同名文件。
