@@ -2,7 +2,13 @@
 
 ## Using MSYS2
 
+* 下载：[msys2](http://www.msys2.org/)
+
 ## Install VS2015 and Intel fortran compiler
+
+* VS2015 for c/c++ compiler cl
+
+* Intel fortran compiler ifort
 
 ## Set up envirement
 
@@ -13,7 +19,7 @@ call "D:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\amd64\vcvars64.
 call "D:\Program Files (x86)\IntelSWTools\compilers_and_libraries_2017.2.187\windows\bin\ifortvars.bat" -arch intel64 vs2015
 ```
 
-建议在Windows 10环境下的powershell中运行msys2_shell.cmd，以防止环境变量字符长度过长的问题。
+建议在Windows 10环境下的powershell中运行msys2_shell.cmd，以防止环境变量字符长度过长的问题。在msys2中确保可以找到cl和ifort。
 
 ## Update old scripts
 
