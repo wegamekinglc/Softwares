@@ -49,4 +49,6 @@ curl -o config.guess 'http://git.savannah.gnu.org/gitweb/?p=config.git;a=blob_pl
 
 ```bash
 ./configure --prefix=. --disable-shared --with-mumps=no --with-asl=no CC=cl CXX=cl F77=ifort FC=ifort
+make
+make install
 ```
