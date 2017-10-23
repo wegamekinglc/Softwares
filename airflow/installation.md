@@ -9,31 +9,27 @@
 下面的依赖，需要在安装airflow之前完成：
 
 ```
-pymymsql
-mysqlclient
+postgresql
 celery
 flower
 rabbitmq
-mysql-server
-mysql-client
-libmysqlclient-dev
+psycopg2
 ```
 
 其中：
 
 * ``celery``：分布式的任务队列；
 * ``flower``：``celery``的监控系统；
-* ``rabbitmq``：``celery``依赖的组件之一
+* ``rabbitmq``：``celery``依赖的组件之一；
+* ``postgresql``: 在本安装说明中是作为``aiflow``的数据存储以及``celery``的``result_backend``。
 
 ## 安装
 
-绝大多数的模块都可以通过``Linux``下的标准安装模式``apt``以及``python``安装工具``pip``完成安装。例如：
+绝大多数的模块都可以通过``Linux``下的标准安装模式``apt``以及``python``安装工具``pip``完成安装。
 
-```
-sudo apt-get install mysql-server
-```
+``PostgreSQL``可以在官网上下载安装包安装，推荐使用[EnterpriseDB](https://www.enterprisedb.com/downloads/postgres-postgresql-downloads#windows)发行版。
 
-以及：
+``airflow``主程序的安装方式可以直接使用``pip``：
 
 ```
 pip install -U airflow

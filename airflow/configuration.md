@@ -4,12 +4,10 @@
 
 ### ``airflow``数据库
 
- ``airflow``需要有一个专用的数据存放任务的信息以及产生的日志。这里使用``mysql``，我们创建如下的数据库：
+ ``airflow``需要有一个专用的数据存放任务的信息以及产生的日志。这里使用``PostgreSQL``，我们创建如下的数据库：
 
 ```
 $ create database airflow;
-$ create user airflow_admin@'%' identified by 'yourpassword';
-$ grant all privileges on airflow.* to airflow_admin@'%';
 ```
 
 ### ``celery``数据库
@@ -70,7 +68,7 @@ executor = CeleryExecutor
 * 设置后台数据库
 
 ```
-sql_alchemy_conn = mysql+pymysql://airflow_admin:yourpassword@localhost:3306/airflow
+sql_alchemy_conn = postgres+psycopg2://postgres:yourpassword@localhost:5432/airflow
 ```
 
 这里具体的参数请与你设置的``airflow``数据库一致。这里我们选用了``pymysql``作为``mysql``数据库的``python``驱动。用户也可以使用例如：``mysqldb``，配置方式不再赘述。
@@ -79,7 +77,7 @@ sql_alchemy_conn = mysql+pymysql://airflow_admin:yourpassword@localhost:3306/air
 
 ```
 broker_url = amqp://airflow:yourpassword@localhost:5672/airflow_host
-celery_result_backend = db+mysql://airflow_admin:yourpassword@localhost:3306/airflow
+celery_result_backend = db+postgres+psycopg2://postgres:yourpassword@localhost:5432/airflow
 ```
 
 这里的具体参数设置见前段。
