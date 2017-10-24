@@ -32,7 +32,7 @@ psycopg2
 ``airflow``主程序的安装方式可以直接使用``pip``：
 
 ```
-pip install -U airflow
+pip install -U apache-airflow
 ```
 
 安装完成之后，可以进入``airflow``安装目录下的``example_dags``，删除所有文件。这样在配置好``airflow``之后不会有多余的测试用的任务。也可以通过配置``airflow.cfg``配置文件的方式，不显示这些例子，具体请参考：[Advanced](advanced.md)
