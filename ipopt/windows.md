@@ -1,14 +1,10 @@
 # Installation on Windows
 
-## Using MSYS2
+## Using cygwin
 
 * 下载：[msys2](http://www.msys2.org/)
 
-* 安装必要的依赖：
- 
- ```
- pacman -S make gcc diffutils pkg-confi tar patch
- ```
+* 安装必要的依赖：``patch``，``wget``
  
 * 重命名 ``$INSTALL_DIR/usr/bin/link.exe`` 为 ``$INSTALL_DIR/usr/bin/link.bak``, 避免和MSVC 的link.exe抵触。
 
@@ -20,21 +16,14 @@
 
 ## Set up envirement
 
-* 编辑 ``$INSTALL_DIR/msys2_shell.cmd`` ，将如下行解除注释
-
- ```
- rem set MSYS2_PATH_TYPE=inherit
- ```
-
-* 进入 ``msys2_shell.cmd`` 所在目录，运行：
+* 编辑 ``Cygwin.bat``，增加：
 
 ```bash
-"D:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\amd64\vcvars64.bat"
-"D:\Program Files (x86)\IntelSWTools\compilers_and_libraries_2017.2.187\windows\bin\ifortvars.bat" -arch intel64 vs2015
-msys2_shell.cmd
+call "D:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\amd64\vcvars64.bat"
+call "D:\Program Files (x86)\IntelSWTools\compilers_and_libraries_2017.2.187\windows\bin\ifortvars.bat" -arch intel64 vs2015
 ```
 
-在msys2中确保可以找到cl和ifort。
+在cmd中确保可以找到cl和ifort。
 
 ## Update old scripts
 
