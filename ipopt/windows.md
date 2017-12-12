@@ -63,7 +63,7 @@ msys2_shell.cmd
 ## Build
 
 ```bash
-./configure --prefix=. --disable-shared --with-mumps=no --with-asl=no CC=cl CXX=cl F77=ifort FC=ifort
+./configure --prefix=/cygdrive/d/dev/svn/CoinIpopt2 --disable-shared --with-mumps=no --with-asl=no --enable-msvc F77=ifort FC=ifort CXXFLAGS="-MD -Ox -nologo -D_CRT_SECURE_NO_DEPRECATE -DNDEBUG" CFLAGS="-MD -Ox -nologo -D_CRT_SECURE_NO_DEPRECATE -DNDEBUG"
 make
 make install
 ```
