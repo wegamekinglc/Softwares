@@ -34,7 +34,7 @@
 msys2_shell.cmd
 ```
 
-建议在Windows 10环境下的powershell中运行msys2_shell.cmd，以防止环境变量字符长度过长的问题。在msys2中确保可以找到cl和ifort。
+在msys2中确保可以找到cl和ifort。
 
 ## Update old scripts
 
