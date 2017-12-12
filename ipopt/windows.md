@@ -52,7 +52,7 @@ call "D:\Program Files (x86)\IntelSWTools\compilers_and_libraries_2017.2.187\win
 ## Build
 
 ```bash
-./configure --prefix=/cygdrive/d/dev/svn/CoinIpopt2 --disable-shared --with-mumps=no --with-asl=no --enable-msvc F77=ifort FC=ifort CXXFLAGS="-MD -Ox -nologo -D_CRT_SECURE_NO_DEPRECATE -DNDEBUG" CFLAGS="-MD -Ox -nologo -D_CRT_SECURE_NO_DEPRECATE -DNDEBUG"
+./configure --prefix=/cygdrive/d/dev/svn/CoinIpopt2 --disable-shared --with-mumps=no --with-asl=no --enable-msvc F77=ifort FC=ifort CXXFLAGS="-MD -Ox -nologo -D_CRT_SECURE_NO_DEPRECATE -DNDEBUG" CFLAGS="-MD -Ox -nologo -D_CRT_SECURE_NO_DEPRECATE -DNDEBUG" FFLAGS="-MD -O3 -fpp -nologo"
 make
 make install
 ```
