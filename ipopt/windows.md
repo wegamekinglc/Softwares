@@ -2,9 +2,9 @@
 
 ## Using cygwin
 
-* 下载：[msys2](http://www.msys2.org/)
+* 下载：[cygwin](http://www.cygwin.com/)
 
-* 安装必要的依赖：``patch``，``wget``
+* 安装必要的依赖：``patch``，``wget``，``curl``等
  
 * 重命名 ``$INSTALL_DIR/usr/bin/link.exe`` 为 ``$INSTALL_DIR/usr/bin/link.bak``, 避免和MSVC 的link.exe抵触。
 
