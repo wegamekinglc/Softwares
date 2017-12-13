@@ -43,7 +43,7 @@ call "D:\Program Files (x86)\IntelSWTools\compilers_and_libraries_2017.2.187\win
 
 ## Modification
 
-在 ``Ipopt\src\Common\config_default.h`` 加入下面的一行：
+在 ``Ipopt\src\Common\config.h`` 加入下面的一行：
 
 ```cpp
 #define HAVE_SNPRINTF 1
