@@ -1,8 +1,12 @@
 # Installation on Windows
 
-## Using MSYS2
+## Using cygwin
 
-* 下载：[msys2](http://www.msys2.org/)
+* 下载：[cygwin](http://www.cygwin.com/)
+
+* 安装必要的依赖：``patch``，``wget``，``curl``等
+ 
+* 重命名 ``$INSTALL_DIR/usr/bin/link.exe`` 为 ``$INSTALL_DIR/usr/bin/link.bak``, 避免和MSVC 的link.exe抵触。
 
 ## Install VS2015 and Intel fortran compiler
 
@@ -12,34 +16,34 @@
 
 ## Set up envirement
 
-更改msys2_shell.cmd文件，增加以下两行：
+* 编辑 ``Cygwin.bat``，增加：
 
 ```bash
 call "D:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\amd64\vcvars64.bat"
 call "D:\Program Files (x86)\IntelSWTools\compilers_and_libraries_2017.2.187\windows\bin\ifortvars.bat" -arch intel64 vs2015
 ```
 
-建议在Windows 10环境下的powershell中运行msys2_shell.cmd，以防止环境变量字符长度过长的问题。在msys2中确保可以找到cl和ifort。
+在cmd中确保可以找到cl和ifort。
 
 ## Update old scripts
 
 * config.guess
 
-```bash
-curl -o config.guess 'http://git.savannah.gnu.org/gitweb/?p=config.git;a=blob_plain;f=config.guess;hb=HEAD'
-```
+ ```bash
+ curl -o config.guess 'http://git.savannah.gnu.org/gitweb/?p=config.git;a=blob_plain;f=config.guess;hb=HEAD'
+ ```
 
 * config.sub
 
-```
- curl -o config.sub 'http://git.savannah.gnu.org/gitweb/?p=config.git;a=blob_plain;f=config.sub;hb=HEAD'
-```
+ ```
+  curl -o config.sub 'http://git.savannah.gnu.org/gitweb/?p=config.git;a=blob_plain;f=config.sub;hb=HEAD'
+ ```
 
 需要同时更新Ipopt以及ThirdParty目录下所有的同名文件。
 
 ## Modification
 
-在Ipopt\src\Common\config.h加入下面的一行：
+在 ``Ipopt\src\Common\config.h`` 加入下面的一行：
 
 ```cpp
 #define HAVE_SNPRINTF 1
@@ -48,7 +52,8 @@ curl -o config.guess 'http://git.savannah.gnu.org/gitweb/?p=config.git;a=blob_pl
 ## Build
 
 ```bash
-./configure --prefix=. --disable-shared --with-mumps=no --with-asl=no CC=cl CXX=cl F77=ifort FC=ifort
+ ./configure --prefix=/home/dev/Ipopt --disable-shared --with-mumps=no --with-asl=no --with-pardiso=no --with-blas=BUILD --with-lapack=BUILD CC=cl CXX=cl F77=ifort FC=ifort CXXFLAGS="-MD -Ox -nologo -D_CRT_SECURE_NO_DEPRECATE -DNDEBUG"
+ CFLAGS="-MD -Ox -nologo -D_CRT_SECURE_NO_DEPRECATE -DNDEBUG" FFLAGS="-MD -Ox -fpp -nologo"
 make
 make install
 ```
