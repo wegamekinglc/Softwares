@@ -6,13 +6,34 @@
 
 * 按照 [Installation](installation.md) 和 [Configuration](configuration.md) 章节设置好主节点；
 
-* 讲``$AIRFLOW_HOME``目录完整拷贝至``celery``其它工作节点上;
+* 将``$AIRFLOW_HOME``目录完整拷贝至``celery``其它工作节点上;
 
-* 确保在``airflow.cfg``中，例如``broker_url``以及``celery_result_backend``等地址都指向同一个位置。
+* 确保在``airflow.cfg``中，
+    
+    * ``executor=CeleryExecutor``
+
+    * 例如``broker_url``以及``celery_result_backend``等地址都指向同一个位置。
 
 * 在其它所有工作节点上运行``airflow initdb``；
 
 * 最后在工作节点上运行``airflow worker``。
+
+## 配置``dask``集群
+
+``airflow``同样可以很方便的使用``dask``进行扩展，步骤如下：
+
+* 按照 [Installation](installation.md) 和 [Configuration](configuration.md) 章节设置好主节点；
+
+* 将``$AIRFLOW_HOME``目录完整拷贝至``celery``其它工作节点上;
+
+* 按照[dask.distributed](https://distributed.readthedocs.io/en/latest/)文档启动集群；
+
+* 确保在``airflow.cfg``中，
+    
+    * ``executor=DaskExecutor``
+
+    * ``cluster_address = $CLUSTER_HOST:$CLUSTER_PORT``
+
 
 ### log的集中存储
 
