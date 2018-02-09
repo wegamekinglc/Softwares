@@ -52,6 +52,10 @@
 * 重启``nfs``
 
     sudo /etc/init.d/nfs-kernel-server restart
+    
+* 服务器端开放读写权限
+    
+    chmod -R 777 /your_airflow_home
 
 * 在另一台主机上挂载该共享目录
 
