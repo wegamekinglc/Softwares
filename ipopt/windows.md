@@ -57,7 +57,6 @@ call "D:\Program Files (x86)\IntelSWTools\compilers_and_libraries_2017.2.187\win
 make
 make install
 ```
-
-<aside class="warning">
-请确保代码是在cygwin下使用cygwin的版本工具签出（例如：git，svn），而不是使用您当前windows环境下的版本管理工具。否则会遇到换行符不匹配的问题。
+<aside class="notice">
+请确保代码是在cygwin下使用cygwin的版本工具签出(例如：git，svn)，而不是使用您当前windows环境下的版本管理工具。否则会遇到换行符不匹配的问题。
 </aside>
